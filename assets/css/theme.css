@@ -141,3 +141,18 @@ Updated   :  05/05/2021
  }
 
  .text-white { color: #f4f4f6 !important; }
+
+ .feature-caption {
+  position: absolute;
+  row-gap: 0;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+ }
+
+ .feature-caption .capt {
+  font-size: 2.5em;
+  color: white;
+  line-height: 1.3em;
+  font-weight: bold;
+ }
