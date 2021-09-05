@@ -1,0 +1,143 @@
+/*!
+Template :	ICOCrypto @by Softnio
+Theme	 :  Default
+Version   :  1.9.3
+Updated   :  05/05/2021 
+*/
+/*! WRITE YOUR CUSTOM STYLE **/
+
+
+.title {
+    color: black !important;
+    font-weight: bold;
+}
+
+.center-image {
+    margin: 0 auto;
+}
+
+
+
+ .text-scroll-horizontally {
+     padding-top: 20px;
+     color: white !important;
+     white-space: nowrap;
+    display: block; /* Important to give the content a width */
+    width: 100%;
+    /* transform: translateX(100%); */
+    /* Add the animation */
+    animation: move 300s linear infinite /* infinite make reapeat the animation indefinitely */;
+  }
+  
+  /* Create the animation */
+  @keyframes move {
+    to { transform: translateX(-100%); }
+  }
+
+  .large-logo {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+
+  .large-image-gradient {
+    position: absolute;
+    bottom: 0;
+    transform: translate(calc(-100% - -2rem),0);
+    height: 30px;
+  }
+
+  .values {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    line-height: 50px;
+    color: #f4f4f6;
+  }
+
+  .values:first-child {
+    min-height: auto;
+    line-height: 50px;
+    align-items: flex-end;
+    border-bottom: 2px solid #f4f4f6;
+  }
+
+  .values .value {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 70px;
+
+  }
+
+  .values .values-text {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .value-box {
+    background: #868686;
+    color: #25333a;
+    font-weight: bold;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .values .border-bottom-v {
+    border-bottom: 2px solid #f4f4f6;
+  }
+
+  
+  .logo-light {
+    height: 50px;
+  }
+
+  .member-section {
+    margin-bottom: -120px;
+    z-index: 999;
+  }
+
+  @media (max-width: 420px) { 
+    .bonus-percent:first-child {
+        font-size: 20px;
+    }
+
+    .bonus-percent {
+        font-size: 16px;
+    }
+  }
+
+  .large-image-gradient {
+      display: none;
+  }
+
+
+  @media (min-width: 992px) { 
+    .center-image {
+        margin: 0;
+    }
+
+    .large-image-gradient {
+        display: block;
+    }
+
+    .member-section {
+        margin-bottom: -165px;
+      }
+
+      .value-box {
+        width: 35px;
+        height: 35px;
+      }
+
+      .logo-light {
+        height: 100px;
+      }
+ }
+
+ .text-white { color: #f4f4f6 !important; }
