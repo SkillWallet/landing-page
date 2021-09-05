@@ -59,6 +59,16 @@
 
 @font-face { font-family: 'Josefin Sans'; src: url("../fonts/Josefin Sans-Regular.eot"); src: local("Josefin Sans Regular"), local("Josefin Sans-Regular"), url("../fonts/Josefin Sans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Josefin Sans-Regular.woff2") format("woff2"), url("../fonts/Josefin Sans-Regular.woff") format("woff"), url("../fonts/Josefin Sans-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; } */
 
+
+@font-face {font-family: "flexslider-icon";
+  src: url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.eot"); /* IE9*/
+  src: url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/flexslider-icon/2c6d794b5cfbe2958da38a4c6aeddde9.svg#flexslider-icon") format("svg"); /* iOS 4.1- */
+}
+
 /** 02. Utilities */
 /** 02.01 Reset */
 html, body { font-family: "Josefin Sans", sans-serif; color: #223b55; font-size: 14px; line-height: 1.86; font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; position: relative; }
@@ -2997,7 +3007,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .preloader { position: fixed !important; top: 0; left: 0; right: 0; bottom: 0; z-index: 10000; }
 
-.preloader:before, .preloader:after { position: absolute; left: 0; height: 51%; width: 100%; transition: all .6s ease; background: #868686;;; content: ''; }
+.preloader:before, .preloader:after { position: absolute; left: 0; height: 51%; width: 100%; transition: all .6s ease; background: #16160d; content: ''; }
 
 .preloader:before { top: 0; }
 

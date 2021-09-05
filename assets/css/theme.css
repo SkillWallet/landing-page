@@ -156,3 +156,38 @@ Updated   :  05/05/2021
   line-height: 1.3em;
   font-weight: bold;
  }
+
+ .powered-by-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-weight: bold;
+ }
+
+ .partner {
+  display: flex;
+  flex-direction: column;
+  /* padding: 0 8px; */
+  font-weight: bold;
+ }
+
+ .partners {
+  display: flex;
+  gap: 30px;
+ }
+
+ .partner img {
+  height: 60px;
+  width: auto !important;
+  max-width: 100%;
+ }
+
+ .slider-item-content {
+  height: 100%;flex-direction: column;
+ }
+
+ .slider-item-content .slider-item-btn {
+   margin-top: 40px;
+   margin-bottom: 20px;
+ }

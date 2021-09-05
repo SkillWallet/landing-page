@@ -653,7 +653,7 @@ NioApp = function (NioApp, $, window, document) {
                   controlNav: true,
                   animationLoop: false,
                   minItems: 1,
-                  maxItems: 1
+                  maxItems: 1,
               });
 
             // $FlexSlioder.flexslider({
