@@ -1712,7 +1712,7 @@ hr { position: relative; z-index: 5; }
 
 .btn-download img { height: 100%; }
 
-.btn-outline:not(:hover) { color: #223b55; background-color: transparent !important; }
+.btn-outline:not(:hover) { color: #223b55; background-color: white !important; }
 
 .btn-outline:before { background-image: none; background-color: #868686; opacity: 1; margin: 2px; width: calc(100% - 4px); height: calc(100% - 4px); }
 
