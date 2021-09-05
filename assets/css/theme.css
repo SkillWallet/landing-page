@@ -206,3 +206,9 @@ Updated   :  05/05/2021
       height: 100px;
     }
 }
+
+@media (max-width: 575px) { 
+  .flex-prev, .flex-next {
+    top: 40% !important;
+  }
+}
