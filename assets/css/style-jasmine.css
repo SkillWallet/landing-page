@@ -6489,11 +6489,11 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .header-navbar::before, .header-navbar-overlay { position: absolute; height: 100%; width: 100%; content: ''; top: 0; }
 
-.header-navbar::before { background: #868686;; left: 50%; transform: translateX(-50%); transition: all .4s; }
+.header-navbar::before { background: #f4f4f6;; left: 50%; transform: translateX(-50%); transition: all .4s; }
 
 .is-dark .header-navbar::before { background: #4a36d3; }
 
-.header-navbar-overlay { background: rgba(22, 11, 109, 0.7); left: 100%; width: 0; z-index: -1; opacity: 0; visibility: hidden; transition: opacity .3s; transition-delay: .2s; }
+.header-navbar-overlay { background: rgba(134, 134, 134, 0.7); left: 100%; width: 0; z-index: -1; opacity: 0; visibility: hidden; transition: opacity .3s; transition-delay: .2s; }
 
 .header-navbar.menu-shown { left: 0 !important; z-index: 10; }
 

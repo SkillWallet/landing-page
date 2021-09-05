@@ -211,4 +211,14 @@ Updated   :  05/05/2021
   .flex-prev, .flex-next {
     top: 40% !important;
   }
+
+  .feature-caption {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+
+   .feature-caption .capt {
+    font-size: 1.6em;
+}
 }
