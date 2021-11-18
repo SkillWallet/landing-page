@@ -1,0 +1,10 @@
+{
+    "homepage": "https://skillwallet.id",
+    "name": "landing-page",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@skill-wallet/auth": "^0.0.50-alpha"
+    }
+  }
+  
