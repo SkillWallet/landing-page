@@ -233,7 +233,11 @@ Updated   :  05/05/2021
 
 .join-comminity-left-days .sw-box-title {
   font-size: 20px;
-  color: black;
+  color: black !important;
+}
+
+.join-comminity-left-days .sw-box-title:hover {
+  text-decoration: underline !important;
 }
 
 .join-comminity-left-days .sw-box-subtitle {
