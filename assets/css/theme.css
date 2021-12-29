@@ -232,13 +232,13 @@ Updated   :  05/05/2021
 }
 
 .join-comminity-left-days .sw-box-title {
-  font-size: 20px;
+  font-size: 17px;
   color: black !important;
 }
 
-.join-comminity-left-days .sw-box-title:hover {
+/* .join-comminity-left-days .sw-box-title:hover {
   text-decoration: underline !important;
-}
+} */
 
 .join-comminity-left-days .sw-box-subtitle {
   font-size: 18px;
