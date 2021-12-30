@@ -1722,7 +1722,10 @@ hr { position: relative; z-index: 5; }
 
 .btn-download img { height: 100%; }
 
-.btn-outline:not(:hover) { color: #223b55; background-color: white !important; }
+.btn-outline:not(:hover) { color: #223b55 !important; background-color: white !important; }
+
+.btn-outline[disabled] { color: #223b55 !important; background-color: #868686 !important; }
+.btn-outline[disabled]:hover { color: #223b55 !important; background-color: #868686 !important; }
 
 .btn-outline:before { background-image: none; background-color: #868686; opacity: 1; margin: 2px; width: calc(100% - 4px); height: calc(100% - 4px); }
 
@@ -1754,11 +1757,11 @@ hr { position: relative; z-index: 5; }
 
 .btn-primary:hover, .btn-primary:focus { background-color: #000000; border-color: #000000; }
 
-.btn-primary:hover:focus, .btn-primary:focus:focus { color: #f4f4f6 !important; }
+.btn-primary:hover:focus, .btn-primary:focus:focus { color: #f4f4f6; }
 
 .tc-light .btn-primary:hover, .tc-light .btn-primary:focus { background-color: #000000; border-color: #000000; color: #f4f4f6 !important; }
 
-.btn-primary.btn-outline:hover { background-color: #343a40; border-color: #343a40; color: #f4f4f6 !important; }
+.btn-primary.btn-outline:not([disabled]):hover { background-color: #343a40; border-color: #343a40; color: #f4f4f6 !important; }
 
 .btn-secondary { background-color: #000000; border-color: #000000; }
 

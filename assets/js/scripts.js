@@ -87,13 +87,15 @@ SkillWallet = (function (SkillWallet, $, window, document) {
   )
     ? true
     : false;
-  SkillWallet.getStatus.asMobile = SkillWallet.Win.width < _mobBreak ? true : false;
+  SkillWallet.getStatus.asMobile =
+    SkillWallet.Win.width < _mobBreak ? true : false;
 
   // Update on Resize
   $win.on("resize", function () {
     SkillWallet.Win.height = $(window).height();
     SkillWallet.Win.width = $(window).width();
-    SkillWallet.getStatus.asMobile = SkillWallet.Win.width < _mobBreak ? true : false;
+    SkillWallet.getStatus.asMobile =
+      SkillWallet.Win.width < _mobBreak ? true : false;
   });
 
   //// Utilities ////
@@ -615,81 +617,147 @@ SkillWallet = (function (SkillWallet, $, window, document) {
   };
   SkillWallet.components.docReady.push(SkillWallet.Plugins.flexslider);
 
-  // Validator !Plugin @v1.0
-  SkillWallet.Plugins.validform = function () {
-    var $form = $(".form-validate");
-    if (!$().validate) {
-      console.log("jQuery Form Validate not Defined.");
-      return true;
-    }
-    if ($form.exists()) {
-      $form.each(function () {
-        var $self = $(this);
-        $self.validate();
-        $self.find(".select").on("change", function () {
-          $(this).valid();
-        });
-      });
-    }
-  };
-  SkillWallet.components.docReady.push(SkillWallet.Plugins.validform);
+  ajaxMailChimpForm($("#subscribe-form"), $("#subscribe-result"));
+  function ajaxMailChimpForm($form, $resultElement) {
+    $form.submit(function (e) {
+      e.preventDefault();
 
-  // Form Validation !Plugin @v1.0
-  SkillWallet.Plugins.submitform = function () {
-    var $form = $(".nk-form-submit");
-    if (!$().validate && !$().ajaxSubmit) {
-      console.log("jQuery Form and Form Validate not Defined.");
-      return true;
+      if (!isValidEmail($form)) {
+        var error = "A valid email address must be provided.";
+        $resultElement.html(error);
+        $resultElement.css("color", "red");
+      } else {
+        $("#subscribe-form .fa-spinner").show();
+        $('#mc-embedded-subscribe').prop('disabled', true);
+        submitSubscribeForm($form, $resultElement);
+      }
+    });
+  }
+
+  function isValidEmail($form) {
+    var email = $form.find("input[type='email']").val();
+    if (!email || !email.length) {
+      return false;
+    } else if (email.indexOf("@") == -1) {
+      return false;
     }
 
-    if ($form.exists()) {
-      $form.each(function () {
-        var $self = $(this),
-          _result = $self.find(".form-results");
-        $self.validate({
-          ignore: [],
-          invalidHandler: function () {
-            _result.slideUp(400);
-          },
-          submitHandler: function (form) {
-            var unindexed_array = $(form).serializeArray();
-            var formData = {};
-            $.map(unindexed_array, function(n, i){
-                formData[n['name']] = n['value'];
-            });
-            _result.slideUp(400);
-            $.ajax({
-              type: 'POST',
-              data : JSON.stringify(formData),
-              contentType: "application/json; charset=utf-8",         
-              dataType : "json",
-              url: 'http://localhost:4000/skillwallet/api',
-              success: function (data) {
-                var type =
-                  data.result === "error" ? "alert-danger" : "alert-success";
-                _result
-                  .removeClass("alert-danger alert-success")
-                  .addClass("alert " + type)
-                  .html(data.message)
-                  .slideDown(400);
-                if (data.result !== "error") {
-                  $(form)
-                    .clearForm()
-                    .find("input")
-                    .removeClass("input-focused");
-                }
-              },
-            });
-            return false;
-          },
-        });
-        $self.find(".select").on("change", function () {
-          $(this).valid();
-        });
-      });
-    }
-  };
-  SkillWallet.components.docReady.push(SkillWallet.Plugins.submitform);
+    return true;
+  }
+
+  function submitSubscribeForm($form, $resultElement) {
+    $.ajax({
+      type: "POST",
+      url: $form.attr("action").replace("/post?", "/post-json?").concat("&c=?"),
+      data: $form.serialize(),
+      contentType: "application/json",
+      dataType: "json",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
+      error: function (error) {
+        $("#subscribe-form .fa-spinner").hide();
+        $('#mc-embedded-subscribe').removeProp('disabled');
+      },
+
+      success: function (data) {
+        if (data.result != "success") {
+          var message =
+            data.msg || "Sorry. Unable to subscribe. Please try again later.";
+          $resultElement.css("color", "red");
+
+          if (data.msg && data.msg.indexOf("already subscribed") >= 0) {
+            message = "You're already subscribed. Thank you.";
+          }
+          $resultElement.html(message);
+          $("#subscribe-form .fa-spinner").hide();
+          $('#mc-embedded-subscribe').removeAttr('disabled');
+        } else {
+          $resultElement.html(
+            "<div class='sucess-result'>SUCCESS!</div>"
+          );
+          $("#mc-embedded-subscribe").hide();
+        }
+      },
+    });
+  }
+
+  // // Validator !Plugin @v1.0
+  // SkillWallet.Plugins.validform = function () {
+  //   var $form = $(".form-validate");
+  //   if (!$().validate) {
+  //     console.log("jQuery Form Validate not Defined.");
+  //     return true;
+  //   }
+  //   if ($form.exists()) {
+  //     $form.each(function () {
+  //       var $self = $(this);
+  //       $self.validate();
+  //       $self.find(".select").on("change", function () {
+  //         $(this).valid();
+  //       });
+  //     });
+  //   }
+  // };
+  // SkillWallet.components.docReady.push(SkillWallet.Plugins.validform);
+
+  // // Form Validation !Plugin @v1.0
+  // SkillWallet.Plugins.submitform = function () {
+  //   var $form = $(".nk-form-submit");
+  //   if (!$().validate && !$().ajaxSubmit) {
+  //     console.log("jQuery Form and Form Validate not Defined.");
+  //     return true;
+  //   }
+
+  //   if ($form.exists()) {
+  //     $form.each(function () {
+  //       var $self = $(this),
+  //         _result = $self.find(".form-results");
+  //       $self.validate({
+  //         ignore: [],
+  //         invalidHandler: function () {
+  //           _result.slideUp(400);
+  //         },
+  //         submitHandler: function (form) {
+  //           var unindexed_array = $(form).serializeArray();
+  //           var formData = {};
+  //           $.map(unindexed_array, function(n, i){
+  //               formData[n['name']] = n['value'];
+  //           });
+  //           _result.slideUp(400);
+  //           $.ajax({
+  //             type: 'POST',
+  //             data : JSON.stringify(formData),
+  //             contentType: "application/json; charset=utf-8",
+  //             dataType : "json",
+  //             url: 'http://localhost:4000/skillwallet/api',
+  //             success: function (data) {
+  //               var type =
+  //                 data.result === "error" ? "alert-danger" : "alert-success";
+  //               _result
+  //                 .removeClass("alert-danger alert-success")
+  //                 .addClass("alert " + type)
+  //                 .html(data.message)
+  //                 .slideDown(400);
+  //               if (data.result !== "error") {
+  //                 $(form)
+  //                   .clearForm()
+  //                   .find("input")
+  //                   .removeClass("input-focused");
+  //               }
+  //             },
+  //           });
+  //           return false;
+  //         },
+  //       });
+  //       $self.find(".select").on("change", function () {
+  //         $(this).valid();
+  //       });
+  //     });
+  //   }
+  // };
+  // SkillWallet.components.docReady.push(SkillWallet.Plugins.submitform);
 
   // Parallax !Plugin @v1.0
   SkillWallet.Plugins.parallax = function () {
