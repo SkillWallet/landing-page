@@ -47,7 +47,7 @@ var SkillWallet = (function (jQ, win, doc) {
 })(jQuery, window, document);
 
 SkillWallet = (function (SkillWallet, $, window, document) {
-  "use strict";
+  ("use strict");
   // Defined Variables
   var $win = $(window),
     $doc = $(document),
@@ -602,6 +602,17 @@ SkillWallet = (function (SkillWallet, $, window, document) {
   /////////////////
   SkillWallet.Plugins = {};
 
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const today = new Date();
+  const launchDate = new Date();
+  launchDate.setDate(26);
+
+  const diffDays = Math.round(Math.abs((today - launchDate) / oneDay));
+
+  const launchDateTxt = `Starting in ${diffDays} Days`;
+
+  $(".join-comminity-left-days .sw-box-subtitle span").text(launchDateTxt);
+
   // Flex Slider !Plugin @v1.9.1
   SkillWallet.Plugins.flexslider = function () {
     var $FlexSlioder = $(".flexslider");
@@ -628,7 +639,7 @@ SkillWallet = (function (SkillWallet, $, window, document) {
         $resultElement.css("color", "red");
       } else {
         $("#subscribe-form .fa-spinner").show();
-        $('#mc-embedded-subscribe').prop('disabled', true);
+        $("#mc-embedded-subscribe").prop("disabled", true);
         submitSubscribeForm($form, $resultElement);
       }
     });
@@ -658,7 +669,7 @@ SkillWallet = (function (SkillWallet, $, window, document) {
       },
       error: function (error) {
         $("#subscribe-form .fa-spinner").hide();
-        $('#mc-embedded-subscribe').removeProp('disabled');
+        $("#mc-embedded-subscribe").removeProp("disabled");
       },
 
       success: function (data) {
@@ -672,11 +683,9 @@ SkillWallet = (function (SkillWallet, $, window, document) {
           }
           $resultElement.html(message);
           $("#subscribe-form .fa-spinner").hide();
-          $('#mc-embedded-subscribe').removeAttr('disabled');
+          $("#mc-embedded-subscribe").removeAttr("disabled");
         } else {
-          $resultElement.html(
-            "<div class='sucess-result'>SUCCESS!</div>"
-          );
+          $resultElement.html("<div class='sucess-result'>SUCCESS!</div>");
           $("#mc-embedded-subscribe").hide();
         }
       },
