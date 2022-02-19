@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  # container name is used in /nginx/default.conf as skillwallet_landing:3000;
+  # whereas PORT=3000 is defined in main Dockerfile so that nginx can communicate with pm2
+  skillwallet_landing_web: 
+    container_name: skillwallet_landing_web
+    build: ./
+
+  skillwallet_landing_nginx: 
+    container_name: skillwallet_landing_nginx
+    build: ./nginx
+    ports:
+      - 3001:80
+
+networks:
+  skillwallet_landing:
