@@ -32,7 +32,7 @@ const About = ({ row, col }) => {
                 <Text
                   maxWidth="30rem"
                   lineHeight="1.7"
-                  fontSize="1.188rem"
+                  fontSize="1.125rem"
                   content={description}
                 />
                 <Link href={button.link}>

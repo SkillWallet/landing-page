@@ -57,10 +57,10 @@ const InputField = styled.div`
   /* Label default style */
   label {
     display: block;
-    color: ${themeGet('colors.labelColor', '#767676')};
-    font-size: ${themeGet('fontSizes.4', '16')}px;
-    font-weight: ${themeGet('fontWeights.4', '500')};
-    margin-bottom: ${themeGet('space.3', '10')}px;
+    color: ${themeGet("colors.labelColor", "#767676")};
+    font-size: ${themeGet("fontSizes.4", "16")}px;
+    font-weight: ${themeGet("fontWeights.4", "500")};
+    margin-bottom: ${themeGet("space.3", "10")}px;
     transition: 0.2s ease all;
   }
 
@@ -70,8 +70,8 @@ const InputField = styled.div`
     padding: 11px;
     display: block;
     color: #000;
-    height: 50px;
-    width: 310px;
+    height: 3.125rem;
+    width: 30rem;
     box-shadow: none;
     border-radius: 0px;
     box-sizing: border-box;
@@ -160,19 +160,19 @@ const InputField = styled.div`
     /* Material input focus style */
     &.is-focus {
       input {
-        border-color: ${themeGet('colors.inactiveIcon', '#ebebeb')};
+        border-color: ${themeGet("colors.inactiveIcon", "#ebebeb")};
       }
 
       label {
         top: -16px;
         font-size: 12px;
-        color: ${themeGet('colors.textColor', '#484848')};
+        color: ${themeGet("colors.textColor", "#484848")};
       }
 
       .highlight {
         width: 100%;
         height: 2px;
-        background-color: ${themeGet('colors.primary', '#028489')};
+        background-color: ${themeGet("colors.primary", "#028489")};
         left: 0;
       }
     }

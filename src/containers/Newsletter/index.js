@@ -16,11 +16,11 @@ const Newsletter = ({ row }) => {
         <Container className="Container">
           <Box className="row" {...row}>
             <Col>
-              <Heading as="h2" color="white" content={title} />
+              <Heading as="h2" maxWidth="30rem" color="white" content={title} />
               <Text
                 maxWidth="30rem"
                 lineHeight="1.7"
-                fontSize="1.188rem"
+                fontSize="1.125rem"
                 content={description}
               />
               <MailchimpSubscribe

@@ -22,7 +22,7 @@
 }
 
 #flaticonExample {
-  font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #222;
 }
@@ -117,7 +117,7 @@
   padding: 0.25em 0.5em;
   display: inline-block;
   color: #fff;
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+  font-family: Raleway, Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   font-weight: lighter;
   margin-top: 1em;
@@ -191,7 +191,7 @@
   border-radius: 4px 4px 0 0;
   padding: 0.5em;
   color: #ffff99;
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+  font-family: Raleway, Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
@@ -248,7 +248,7 @@
   width: 100%;
   height: 150px;
   font-size: 0.8em;
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+  font-family: Raleway, Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   -webkit-appearance: none;
 }
@@ -284,7 +284,7 @@
   padding: 0.5em;
   color: #ffff99;
   margin-top: 1em;
-  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+  font-family: Raleway, Consolas, Monaco, Lucida Console, Liberation Mono,
     DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 

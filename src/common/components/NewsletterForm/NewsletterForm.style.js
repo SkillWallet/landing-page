@@ -19,7 +19,7 @@ const NewsletterFormWrapper = styled.form`
     display: flex;
     justify-content: center;
     margin-top: 3.625rem;
-    width: 310px;
+    width: 30rem;
 
     button {
       width: 21.5rem;
@@ -27,7 +27,7 @@ const NewsletterFormWrapper = styled.form`
       background: #fff;
       height: 3.438rem;
       min-height: 3.438rem;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
 `;

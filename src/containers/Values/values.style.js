@@ -23,14 +23,14 @@ const ValuesArea = styled.section`
     font-size: 10.211rem;
     font-weight: bold;
     line-height: 10.211rem;
-    flex: 30%;
+    flex: 38%;
   }
 
   .values .values-text {
     display: flex;
     align-items: center;
     font-size: 1.938rem;
-    flex: 75%;
+    flex: 62%;
   }
 
   .value-box {

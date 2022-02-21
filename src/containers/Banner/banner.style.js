@@ -1,8 +1,7 @@
-import { BannerData } from "common/data";
 import styled from "styled-components";
 const BannerArea = styled.section`
   background-color: #fff;
-  padding-top: 160px;
+  padding-top: 8rem;
   padding-bottom: 0;
   position: relative;
 
@@ -22,6 +21,7 @@ const BannerArea = styled.section`
     padding-top: 140px;
     padding-bottom: 0;
   }
+
   @media (max-width: 575px) {
     padding-top: 100px;
     padding-bottom: 0;
@@ -39,12 +39,12 @@ const BannerArea = styled.section`
   }
   p {
     font-weight: normal;
-    font-size: 1.188rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     letter-spacing: 0;
     color: #000;
     margin-bottom: 0;
-    max-width: 515px;
+    max-width: 32.188rem;
     opacity: 0.8;
     @media (max-width: 1600px) {
       max-width: 400px;
@@ -68,7 +68,7 @@ export const MarqueeWrapper = styled.div`
   background-color: #000;
   color: #fff;
   height: 18rem;
-  max-height: 18rem;
+  max-height: 16rem;
   font-size: 1.438rem;
   padding: 2.063rem 0;
   position: relative;
@@ -80,8 +80,8 @@ export const MarqueeWrapper = styled.div`
 `;
 
 export const FloatingWrapper = styled.div`
-  padding: 20px;
-  width: 30.153rem;
+  padding: 1.5rem;
+  // width: 30.153rem;
   height: 16.891rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
@@ -89,10 +89,10 @@ export const FloatingWrapper = styled.div`
   z-index: 2;
   position: absolute;
   background: white;
-  left: 100px;
+  left: 6.25rem;
 
   .sw-box-title {
-    font-size: 17px;
+    font-size: 1.8rem;
     color: black;
   }
 
@@ -101,7 +101,7 @@ export const FloatingWrapper = styled.div`
   }
 
   .sw-box-subtitle {
-    font-size: 18px;
+    font-size: 1.5rem;
     color: black;
     display: flex;
     align-items: center;
@@ -136,9 +136,11 @@ export const FloatingWrapper = styled.div`
 
 export const StatWrapper = styled.div`
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: space-between;
 
   .stat {
     display: flex;
@@ -159,7 +161,7 @@ export const StatWrapper = styled.div`
     }
 
     + .stat {
-      margin-left: 7.875rem;
+      // margin-left: 7.875rem;
     }
   }
 

@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
-import { rgba } from "polished";
 
 const SectionWrapper = styled.section`
   padding: 75px 0;
@@ -34,20 +32,11 @@ export const MemberCardWrapper = styled.div`
   align-items: center;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(31.827rem, 1fr));
-  grid-template-rows: 38rem;
+  grid-template-rows: 30rem;
   > div {
     padding: 4rem;
     transition: all 0.3s;
     border-radius: 8px;
-
-    // @media (max-width: 1600px) {
-    //   padding: 40px 45px;
-    // }
-    // @media (max-width: 768px) {
-    // }
-
-    // @media (max-width: 575px) {
-    // }
   }
 
   .feature__block {
@@ -84,22 +73,18 @@ export const MemberCardWrapper = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
       }
       h3 {
         font-size: 1.431rem;
-        line-height: 1.45;
-        font-weight: 700;
+        line-height: 1;
+        font-weight: normal;
         margin-bottom: 10px;
       }
       p {
-        // color: ${themeGet("colors.white", "#FFFFFF")};
-        font-size: 1.119rem;
         line-height: 1.9;
         padding: 0 15px;
         opacity: 0.7;
-        @media (max-width: 1600px) {
-          font-size: 15px;
-        }
       }
     }
   }

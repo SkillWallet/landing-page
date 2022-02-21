@@ -47,7 +47,7 @@ const AboutWrapper = styled.section`
       height: auto;
       direction: rtl;
       z-index: 11;
-      width: 240px;
+      width: 23.75rem;
       text-align: end;
     }
 

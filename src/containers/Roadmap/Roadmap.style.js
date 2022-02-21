@@ -91,14 +91,10 @@ export const RoadmapWrapper = styled.div`
         margin-bottom: 10px;
       }
       p {
-        // color: ${themeGet("colors.white", "#FFFFFF")};
         font-size: 1.119rem;
         line-height: 1.9;
         padding: 0 15px;
         opacity: 0.7;
-        @media (max-width: 1600px) {
-          font-size: 15px;
-        }
       }
     }
   }

@@ -27,11 +27,8 @@ const NewsletterArea = styled.section`
   }
   p {
     color: #fff;
-    max-width: 515px;
+    max-width: 32.188rem;
     margin-bottom: 2.188rem !important;
-    @media (max-width: 1600px) {
-      max-width: 400px;
-    }
   }
 
   .main-button {

@@ -3,11 +3,18 @@ import { themeGet } from "@styled-system/theme-get";
 
 const GlobalStyle = createGlobalStyle`
   html {
-    font-size: 62.5%;
+    font-size: 100%;
+
+    @media only screen and (max-width: 1600px) {
+      font-size: 75%;
+    }
+    @media(max-width: 1199px) {
+      font-size: 62.8%;
+    }
   }
   body {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 1.6rem;
+    font-family: Raleway, sans-serif;
+    font-size: 1.4rem;
   }
   h1,
   h2,
@@ -15,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: Raleway, sans-serif;
   }
   p:last-of-type {
     margin-bottom: 0;
@@ -73,16 +80,13 @@ const GlobalStyle = createGlobalStyle`
           @media (max-width: 767px) {
             margin-bottom: 25px;
           }
-          a{
+          a {
             text-transform: uppercase;
-            font-size: 20px;
+            font-size: 1.25rem;
             font-weight: 400;
             color: #000;
             position: relative;
             transition: 0.15s ease-in-out;
-            @media (max-width: 767px) {
-              font-size: 18px;
-            }
             &:hover {
               text-shadow: 0 1px 0px #000;
             }
@@ -132,7 +136,7 @@ const GlobalStyle = createGlobalStyle`
       &:before{
         content: '\f10b';
         font-family: Flaticon;
-        font-size: 26px;
+        font-size: 1.625rem;
         color: #000;
         transform: rotate(45deg);
         display: block;
@@ -277,30 +281,23 @@ export const SectionHeader = styled.header`
     margin-bottom: 60px;
   }
   p {
-    font-size: 16px;
     font-weight: normal;
     line-height: 2;
     margin-bottom: 12px;
     color: ${themeGet("colors.textColor", "#343D48")};
-    @media only screen and (max-width: 991px) {
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
   }
   h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
     line-height: 1.3;
     font-weight: 500;
     color: ${themeGet("colors.headingColor", "#0F2137")};
     margin-bottom: 18px;
     letter-spacing: -0.5px;
     @media only screen and (max-width: 1600px) {
-      font-size: 24px;
       letter-spacing: -0.7px;
       margin-bottom: 12px;
     }
     @media only screen and (max-width: 991px) {
-      font-size: 22px;
       line-height: 38px;
       letter-spacing: -0.5px;
     }
@@ -310,19 +307,10 @@ export const SectionHeader = styled.header`
     margin-top: -10px;
     margin-bottom: 40px;
     h2 {
-      font-size: 40px;
+      font-size: 2.5rem;
       line-height: 1.35;
       margin-bottom: 25px;
       letter-spacing: -0.5px;
-      @media (max-width: 1600px) {
-        font-size: 32px;
-      }
-      @media (max-width: 768px) {
-        font-size: 30px;
-      }
-      @media (max-width: 575px) {
-        font-size: 22px;
-      }
     }
   }
 `;

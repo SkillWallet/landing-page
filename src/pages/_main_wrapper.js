@@ -37,7 +37,7 @@ const MainWrapper = ({ children, hideAuth }) => {
           <link
             rel="stylesheet"
             type="text/css"
-            href="https://fonts.googleapis.com/css?family=Josefin+Sans"
+            href="https://fonts.googleapis.com/css?family=Raleway"
           />
         </Head>
         <ResetCSS />

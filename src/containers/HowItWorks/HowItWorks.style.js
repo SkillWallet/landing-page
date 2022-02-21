@@ -41,7 +41,7 @@ const HowItWorksArea = styled.section`
       line-height: 1;
       letter-spacing: -0.02em;
       color: #000;
-      max-width: 100px;
+      max-width: 10rem;
     }
   }
 
@@ -55,7 +55,7 @@ const HowItWorksArea = styled.section`
     display: flex;
     align-items: center;
     p {
-      max-width: 100px;
+      max-width: 10rem;
     }
   }
   .icon-image {
