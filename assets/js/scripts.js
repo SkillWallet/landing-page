@@ -605,8 +605,8 @@ SkillWallet = (function (SkillWallet, $, window, document) {
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const today = new Date();
   const launchDate = new Date();
-  launchDate.setDate(9);
-  launchDate.setMonth(2);
+  launchDate.setDate(8);
+  launchDate.setMonth(7);
 
 
   const diffDays = Math.round(Math.abs((today - launchDate) / oneDay));
