@@ -6464,7 +6464,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 /** 05. Layouts */
 /** 05.01 Header */
-.header-main { padding: 12px 0; transition: all .4s; }
+.header-main { transition: all .4s; }
 
 .is-transparent .header-main, .has-fixed .header-main { width: 100%; z-index: 49; }
 
@@ -6476,7 +6476,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 
 .has-fixed.is-dark .header-main { background: #0f084d; }
 
-.has-fixed.is-shrink .header-main { padding: 8px 0; }
+/* .has-fixed.is-shrink .header-main { padding: 8px 0; } */
 
 .header-container:not(.container) { width: 100%; padding: 0 15px; }
 
@@ -6537,7 +6537,7 @@ ul.progress-info { display: flex; justify-content: space-between; }
 .logo-lg img { height: 52px; }
 
 @media (min-width: 992px) { .header-navbar:not(.header-navbar-classic) { height: auto; width: auto; left: 0; }
-  .header-main { padding: 20px 0; }
+  /* .header-main { padding: 20px 0; } */
   .header-nav-toggle { display: none; }
   .header-container:not(.container) { padding: 0 25px; }
   .header-container-s1:not(.container) { padding: 0 25px; }
